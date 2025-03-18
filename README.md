@@ -1,7 +1,7 @@
 # CORRECT
 This is the pytorch implementation of NAACL-2025 paper "[CORRECT: Context- and Reference-Augmented Reasoning and Prompting for Scientific Claim Verification](/paper/NAACL25-CORRECT.pdf)", authored by [Delvin Ce Zhang](http://delvincezhang.com/) and [Dongwon Lee](https://pike.psu.edu/dongwon/).
 
-CORRECT is a language model for scientific claim verification task, which aims to verify a given claim using reliable evidence. In this paper, we discover that evidence sentences usually contain insufficient information, and we need to use auxiliary contextual document and referential documents of evidence sentences to complement them, so that we can verify the claim more accurately. Experimental results show the effectiveness of our proposed model CORRECT on four publicly available datasets.
+CORRECT is a language model for scientific claim verification task, which aims to verify a given claim using reliable evidence. In this paper, we discover that evidence sentences usually contain insufficient information, and we use auxiliary contextual document and referential documents of evidence sentences to complement them, so that we can verify the claim more accurately.
 
 __Please note that our model can still run without error even with no contexts or references__ by simply removing contextual graph layer and referential graph layer.
 
