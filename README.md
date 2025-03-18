@@ -121,7 +121,7 @@ Below is an example of `evidence.json` format. It is a list, and each element in
 ]
 ```
 
-Below is an example of `contexts.json` format. It is a list, and each element in the list is a dictionary containing information of a specific contextual document. The length of the list is the number of total contextual documents. `references.json` has the same format and is not double explained.
+Below is an example of `contexts.json` format. It is a list, and each element in the list is a dictionary containing information of a specific contextual document. The length of the list is the number of total contextual documents. `references.json` has the same format and is not double explained. Both `contexts.json` and `references.json` are optional to provide. If provided, the model will contruct a three-layer graph and use them. If not provided, the model can still run.
 
 ```
 [
