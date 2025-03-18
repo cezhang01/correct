@@ -31,27 +31,27 @@ class DataCenter():
 
     def load_data(self):
 
-        with open('../data/' + self.dataset_name + '/claims.json', 'r') as file:
+        with open('./data/' + self.dataset_name + '/claims.json', 'r') as file:
             claims_list = json.load(file)
             self.claims = {}
             self.claims = {claim['claim_id']: claim for claim in claims_list}
-        with open('../data/' + self.dataset_name + '/evidence.json', 'r') as file:
+        with open('./data/' + self.dataset_name + '/evidence.json', 'r') as file:
             evidences_list = json.load(file)
             self.evidences = {}
             self.evidences = {evidence['evid_id']: evidence for evidence in evidences_list}
 
         self.has_contexts = False
-        if os.path.exists('../data/' + self.dataset_name + '/contexts.json'):
+        if os.path.exists('./data/' + self.dataset_name + '/contexts.json'):
             self.has_contexts = True
-            with open('../data/' + self.dataset_name + '/contexts.json', 'r') as file:
+            with open('./data/' + self.dataset_name + '/contexts.json', 'r') as file:
                 contexts_list = json.load(file)
                 self.contexts = {}
                 self.contexts = {context['ctx_id']: context for context in contexts_list}
 
         self.has_references = False
-        if os.path.exists('../data/' + self.dataset_name + '/references.json'):
+        if os.path.exists('./data/' + self.dataset_name + '/references.json'):
             self.has_references = True
-            with open('../data/' + self.dataset_name + '/references.json', 'r') as file:
+            with open('./data/' + self.dataset_name + '/references.json', 'r') as file:
                 references_list = json.load(file)
                 self.references = {}
                 self.references = {references['ref_id']: references for references in references_list}
