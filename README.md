@@ -105,21 +105,16 @@ Below is an example of `evidence.json` format. It is a list, and each element in
         ]
     },
     {
-        "evid_id": 1,
-        "s2orc_id": 219688666,
-        "title": "Field-deployable, rapid diagnostic testing of saliva samples for SARS-CoV-2.",
-        "evid_text": "We developed an assay that detects single copies of SARS-CoV-2 virus directly from saliva and swab samples in 30 min using a simple, one-step protocol that utilizes only a heat block and microcentrifuge tube prefilled with a mixture containing the necessary reagents and has a sensitivity and specificity of 97% and 100%, respectively.",
+        "evid_id": 23,
+        "s2orc_id": 214681246,
+        "title": "Severe Outcomes Among Patients with Coronavirus Disease 2019 (COVID-19) - United States, February 12-March 16, 2020",
+        "evid_text": "Globally, approximately 170,000 confirmed cases of coronavirus disease 2019 (COVID-19) caused by the 2019 novel coronavirus (SARS-CoV-2) have been reported, including an estimated 7,000 deaths in approximately 150 countries (1).",
         "ctx_id": [
-            0
+            7
         ],
         "ref_ids": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
+            102,
+            103
         ]
     }
 ]
