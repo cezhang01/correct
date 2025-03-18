@@ -15,9 +15,13 @@ __Please note that our model can still run without error even with no contexts o
 - sklearn == 1.3.2
 
 ## Run
-`python main.py -es gold`  # claim verification with gold evidence sentences
+`python main.py -m supervided -es gold`  # claim verification with fully supervised training and gold evidence sentences
 
-`python main.py -es retrieved`   # claim verification with BM25 retrieved evidence sentences
+`python main.py -m supervised -es retrieved`   # claim verification with fully supervised training and BM25 retrieved evidence sentences
+
+`python main.py -m few_shot -ns 5 -es gold`  # claim verification with 5-shot training and gold evidence sentences
+
+`python main.py -m few_shot -ns 5 -es retrieved`  # claim verification with 5-shot training and BM25 retrieved evidence sentences
 
 ### Parameter Setting
 - -dn: dataset name, default = check_covid (choices = \[check_covid, bear_fact, scifact, feverous\])
