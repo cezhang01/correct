@@ -3,7 +3,7 @@ This is the pytorch implementation of NAACL-2025 paper "[CORRECT: Context- and R
 
 CORRECT is a language model for scientific claim verification task, which aims to verify a given claim using reliable evidence. In this paper, we discover that evidence sentences usually contain insufficient information, and we use auxiliary contextual document and referential documents of evidence sentences to complement them, so that we can verify the claim more accurately.
 
-__Please note that our model can still run without error even with no contexts or references__ by simply removing contextual graph layer and referential graph layer.
+__Please note that our model can still run even with no contexts or references__ by simply removing contextual graph layer and referential graph layer.
 
 ![](/paper/figure.jpg)
 
@@ -15,6 +15,9 @@ __Please note that our model can still run without error even with no contexts o
 - sklearn == 1.3.2
 
 ## Run
+
+__Please note that if you meet out-of-memory (OOM) error when running the model__, you could decrease `args.max_text_length` to 128 (maximum length of text for tokenization) and `args.minibatch_size` to reduce the memory load.
+
 `python main.py -m supervided -es gold`  # claim verification with fully supervised training and gold evidence sentences
 
 `python main.py -m supervised -es retrieved`   # claim verification with fully supervised training and BM25 retrieved evidence sentences
@@ -57,7 +60,7 @@ Below is an example of `claims.json` format. It is a list, and each element in t
         "claim_text": "One type of COVID-19 test identifies coronavirus proteins in a few seconds.",  # claim text (a string)
         "label": "refute",  # label (can be any string, may not strictly be support, refute, or nei)
         "train_dev_test": "train",  # dataset split (optional. If provided with train, dev, or test, the model will follow the split. If not provided, the model will split the data into 72:8:20 for train:dev:test)
-        "gold_evid_ids": [  # a list of gold evidence ids (used only when args.evidence_setting == gold, these evidence ids correspond to the ids in evidences.json)
+        "gold_evid_ids": [  # a list of gold evidence ids (used only when args.evidence_setting == gold, these evidence ids correspond to the ids in evidence.json)
             0
         ],
         "bm25_retrieved_evid_ids": [  # a list of retrieved evidence ids (used only when args.evidence_setting == retrieved)
