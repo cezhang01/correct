@@ -16,8 +16,6 @@ __Please note that our model can still run even with no contexts or references__
 
 ## Run
 
-__Please note that if you meet out-of-memory (OOM) error when running the model__, you could decrease `args.max_text_length` to 128 (maximum length of text for tokenization) and `args.minibatch_size` to reduce the memory load.
-
 `python main.py -m supervided -es gold`  # claim verification with fully supervised training and gold evidence sentences
 
 `python main.py -m supervised -es retrieved`   # claim verification with fully supervised training and BM25 retrieved evidence sentences
@@ -45,6 +43,8 @@ __Please note that if you meet out-of-memory (OOM) error when running the model_
 - -ddp: whether use distributed training, default = False
 - -gpu: gpu
 - -rs: random seed
+
+__Please note that if you meet out-of-memory (OOM) error when running the model__, you could decrease `args.max_text_length` to 128 (maximum length of text for tokenization) and `args.minibatch_size` to reduce the memory load.
 
 ## Data
 We release BearFact, Check-COVID, and SciFact datasets in `data.zip` file. Please unzip `data.zip` and put the unzipped data into `./data` folder (e.g., `./data/check_covid/***.json`). For the largest FEVEROUS-S dataset, please email Delvin Ce Zhang (delvincezhang@gmail.com) for access.
