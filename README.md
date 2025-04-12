@@ -16,7 +16,7 @@ __Please note that our model can still run even with no contexts or references__
 
 ## Run
 
-`python main.py -m supervided -es gold`  # claim verification with fully supervised training and gold evidence sentences
+`python main.py -m supervised -es gold`  # claim verification with fully supervised training and gold evidence sentences
 
 `python main.py -m supervised -es retrieved`   # claim verification with fully supervised training and BM25 retrieved evidence sentences
 
