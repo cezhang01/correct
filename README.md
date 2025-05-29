@@ -32,7 +32,7 @@ __Please note that our model can still run even with no contexts or references__
 - -np: number of prompt embeddings, default = 8
 - -rp: whether use random initialization for prompt embeddings, default = False
 - -lm: the specific version of BERT language model, default = pubmed_bert (choices = \[base_bert, sci_bert, pubmed_bert, large_bert, multilingual_bert\])
-- -ne: number of training epochs, default = 50
+- -ne: number of training epochs, default = 100
 - -ls: number of epochs to print and save the results, default = 5
 - -lr_lm: learning rate for BERT language model, default = 1e-5
 - -lr_p: learning rate for prompt embeddings, default = 1e-3
