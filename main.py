@@ -33,7 +33,7 @@ def parse_args():
     parser.add_argument('-ls', '--log_steps', type=int, default=5)
     parser.add_argument('-lr_lm', '--learning_rate_for_lm', type=float, default=1e-5)
     parser.add_argument('-lr_p', '--learning_rate_for_prompt_embs', type=float, default=1e-3)
-    parser.add_argument('-ms', '--minibatch_size', type=int, default=8)
+    parser.add_argument('-ms', '--minibatch_size', type=int, default=4)
     parser.add_argument('-ml', '--max_text_length', type=int, default=256)
     parser.add_argument('-n_evid', '--num_sampled_evidence', type=int, default=3)
     parser.add_argument('-n_ref', '--num_sampled_references', type=int, default=5)
